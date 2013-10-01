@@ -1,0 +1,43 @@
+# OASIS_START
+# DO NOT EDIT (digest: 27accb4d91d3df44cf2a416529ab9d63)
+# Ignore VCS directories, you can use the same kind of rule outside 
+# OASIS_START/STOP if you want to exclude directories that contains 
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library omake_clib
+"src/clib/omake_clib.cmxs": use_omake_clib
+"src/clib/omake_clib.cmxa": use_libomake_clib_stubs
+# Library omake_cutil
+"src/libmojave/cutil/omake_cutil.cmxs": use_omake_cutil
+"src/libmojave/cutil/omake_cutil.cmxa": use_libomake_cutil_stubs
+# Executable omake
+"src/main/omake_main.native": use_omake_clib
+"src/main/omake_main.native": use_omake_cutil
+"src/main/omake_main.native": pkg_unix
+<src/main/*.ml{,i}>: use_omake_clib
+<src/main/*.ml{,i}>: use_omake_cutil
+<src/main/*.ml{,i}>: pkg_unix
+# OASIS_STOP
+
+"src/ast": include
+"src/build": include
+"src/builtin": include
+"src/env": include
+"src/eval": include
+"src/exec": include
+"src/ir": include
+"src/libmojave/stdlib": include
+"src/libmojave/unix": include
+"src/libmojave/util": include
+"src/magic": include
+"src/shell": include
+"src/util": include

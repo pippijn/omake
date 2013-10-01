@@ -1,0 +1,42 @@
+OASISFormat:    0.3
+Name:           omake
+Version:        0.9.8.6
+Synopsis:       The OMake build system
+Authors:        Mojave Group, Caltech
+License:        GPL-2.0
+Plugins:        DevFiles (0.3)
+
+Executable              omake
+  Path:                 src/main
+  BuildTools:           ocamlbuild
+  BuildDepends:         unix,omake_cutil,omake_clib
+  MainIs:               omake_main.ml
+  CompiledObject:       native
+  Install:		true
+
+Library omake_clib
+  Path:                 src/clib
+  BuildTools:           ocamlbuild
+  Modules:              Omake_clib_dummy
+  CSources:             omake_shell_sys.c,
+                        readline.c
+  CompiledObject:       native
+  Install:		false
+
+Library omake_cutil
+  Path:                 src/libmojave/cutil
+  BuildTools:           ocamlbuild
+  Modules:              Lm_cutil_dummy
+  CSources:             lm_channel.c,
+                        lm_compat_win32.c,
+                        lm_ctype.c,
+                        lm_fs_case_sensitive.c,
+                        lm_heap.c,
+                        lm_notify.c,
+                        lm_printf.c,
+                        lm_terminfo.c,
+                        lm_termsize.c,
+                        lm_uname_ext.c,
+                        lm_unix_cutil.c
+  CompiledObject:       native
+  Install:		false

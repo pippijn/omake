@@ -1,0 +1,14 @@
+# OASIS_START
+# DO NOT EDIT (digest: 18a3c45a1498558e217ed9dc4ea045ef)
+lm_channel.o
+lm_compat_win32.o
+lm_ctype.o
+lm_fs_case_sensitive.o
+lm_heap.o
+lm_notify.o
+lm_printf.o
+lm_terminfo.o
+lm_termsize.o
+lm_uname_ext.o
+lm_unix_cutil.o
+# OASIS_STOP

@@ -1,0 +1,19 @@
+Source: omake
+Section: devel
+Priority: optional
+Maintainer: Pippijn van Steenhoven <pip88nl@gmail.com>
+Build-Depends:
+  dh-ocaml,
+  ocaml-nox (>= 3.12),
+  ocaml-findlib,
+  debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: https://github.com/pippijn/omake
+Vcs-Git: git://github.com/pippijn/omake
+Vcs-Browser: https://github.com/pippijn/omake
+
+Package: omake
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: The OMake build system
+ Stuff.

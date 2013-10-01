@@ -1,0 +1,5 @@
+# OASIS_START
+# DO NOT EDIT (digest: df1a0e4b4007df13aae94025849cbdff)
+omake_shell_sys.o
+readline.o
+# OASIS_STOP

@@ -1,0 +1,11 @@
+# OASIS_START
+# DO NOT EDIT (digest: 8349775ab9be951a984e7979964a22c7)
+version = "0.9.8.6"
+description = "The OMake build system"
+archive(byte) = "omake_cutil.cma"
+archive(byte, plugin) = "omake_cutil.cma"
+archive(native) = "omake_cutil.cmxa"
+archive(native, plugin) = "omake_cutil.cmxs"
+exists_if = "omake_cutil.cmxa"
+# OASIS_STOP
+

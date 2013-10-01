@@ -1,0 +1,11 @@
+# OASIS_START
+# DO NOT EDIT (digest: 3c5f7a5ac11c90c21604f9b3cd8ac4f9)
+version = "0.9.8.6"
+description = "The OMake build system"
+archive(byte) = "omake_clib.cma"
+archive(byte, plugin) = "omake_clib.cma"
+archive(native) = "omake_clib.cmxa"
+archive(native, plugin) = "omake_clib.cmxs"
+exists_if = "omake_clib.cmxa"
+# OASIS_STOP
+
