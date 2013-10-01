@@ -1,0 +1,16 @@
+language: c
+script: dpkg-buildpackage -b -us -uc
+
+install:
+   # Add PPA to download from.
+   - sudo apt-add-repository -y ppa:pippijn/ppa
+   - sudo apt-get update
+   # Package dependencies.
+   - sudo apt-get install devscripts equivs
+   - sudo mk-build-deps -ir
+
+# whitelist
+branches:
+   only:
+      - master
+      - /.*\/staging/
