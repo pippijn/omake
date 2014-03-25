@@ -41,3 +41,5 @@
 "src/magic": include
 "src/shell": include
 "src/util": include
+
+true: debug
