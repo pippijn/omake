@@ -1,5 +1,6 @@
 # OASIS_START
-# DO NOT EDIT (digest: 18a3c45a1498558e217ed9dc4ea045ef)
+# DO NOT EDIT (digest: 864e490a0d9f0bb200a619da7afca9ac)
+fam_inotify.o
 lm_channel.o
 lm_compat_win32.o
 lm_ctype.o

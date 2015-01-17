@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 27accb4d91d3df44cf2a416529ab9d63)
+# DO NOT EDIT (digest: b6504dcbee7635d63e49aea83ab905da)
 # Ignore VCS directories, you can use the same kind of rule outside 
 # OASIS_START/STOP if you want to exclude directories that contains 
 # useless stuff for the build process
@@ -18,6 +18,19 @@
 "src/clib/omake_clib.cmxa": use_libomake_clib_stubs
 # Library omake_cutil
 "src/libmojave/cutil/omake_cutil.cmxs": use_omake_cutil
+<src/libmojave/cutil/*.ml{,i}>: oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/fam_inotify.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_channel.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_compat_win32.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_ctype.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_fs_case_sensitive.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_heap.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_notify.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_printf.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_terminfo.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_termsize.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_uname_ext.c": oasis_library_omake_cutil_ccopt
+"src/libmojave/cutil/lm_unix_cutil.c": oasis_library_omake_cutil_ccopt
 "src/libmojave/cutil/omake_cutil.cmxa": use_libomake_cutil_stubs
 # Executable omake
 "src/main/omake_main.native": use_omake_clib

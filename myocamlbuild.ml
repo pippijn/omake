@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 091ee31095cb4413be91d0b8453c05ec) *)
+(* DO NOT EDIT (digest: c88d326918533e9d5579151ff471fa0f) *)
 module OASISGettext = struct
 (* # 21 "src/oasis/OASISGettext.ml" *)
 
@@ -485,15 +485,36 @@ let package_default =
      lib_c =
        [
           ("omake_clib", "src/clib", []);
-          ("omake_cutil", "src/libmojave/cutil", [])
+          ("omake_cutil",
+            "src/libmojave/cutil",
+            [
+               "src/libmojave/cutil/fam_pseudo.h";
+               "src/libmojave/cutil/inotify.h";
+               "src/libmojave/cutil/inotify-syscalls.h"
+            ])
        ];
-     flags = [];
+     flags =
+       [
+          (["oasis_library_omake_cutil_ccopt"; "compile"],
+            [
+               (OASISExpr.EBool true,
+                 S
+                   [
+                      A "-ccopt";
+                      A "-DFAM_ENABLED";
+                      A "-ccopt";
+                      A "-DFAM_PSEUDO";
+                      A "-ccopt";
+                      A "-DFAM_INOTIFY"
+                   ])
+            ])
+       ];
      includes = [("src/main", ["src/clib"; "src/libmojave/cutil"])];
      }
   ;;
 
 let dispatch_default = MyOCamlbuildBase.dispatch_default package_default;;
 
-# 498 "myocamlbuild.ml"
+# 519 "myocamlbuild.ml"
 (* OASIS_STOP *)
 Ocamlbuild_plugin.dispatch dispatch_default;;

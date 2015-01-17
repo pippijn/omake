@@ -27,7 +27,12 @@ Library omake_cutil
   Path:                 src/libmojave/cutil
   BuildTools:           ocamlbuild
   Modules:              Lm_cutil_dummy
-  CSources:             lm_channel.c,
+  CCOpt:		-DFAM_ENABLED -DFAM_PSEUDO -DFAM_INOTIFY
+  CSources:             fam_inotify.c,
+                        fam_pseudo.h,
+                        inotify.h,
+                        inotify-syscalls.h,
+                        lm_channel.c,
                         lm_compat_win32.c,
                         lm_ctype.c,
                         lm_fs_case_sensitive.c,
